@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Feed from './components/feed'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-
+        <Feed />
       </main>
 
       <footer className={styles.footer}>
