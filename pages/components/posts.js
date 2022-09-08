@@ -1,6 +1,6 @@
-export default function HomeBtn() {
+export default function Posts() {
     return (<section>
-      <button>Home</button>
+      <p>Posts Here</p>
       {/* Aqui ir"ao vir os posts */}
     </section>)
   }
