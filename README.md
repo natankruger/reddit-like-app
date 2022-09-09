@@ -32,3 +32,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+git pull
+git branch <nomeDaBranchNova> - para criar uma nova ramificação
+git checkout <nomeDaBranchNova> - para entrar nessa nova ramificação
+git status - para verificar o status dos arquivos
+git add (selecionar um arquivo especifico pelo nome [caminho completo relativo ao projeto], ou pode passar um asterisco * para selecionar todos os arquivos)
+git commit -m "Mensagem aqui" - server para adcionar uma mensagem para o commit
+git push origin <nomeDaBranchNova> - serve para mandar os commits feitos para uma branch remota
+git checkout <nomeDaBranchNova> - para entrar nessa nova ramificação
+git pull - serve para pegar as alterações feitas no repositório/branch remoto
