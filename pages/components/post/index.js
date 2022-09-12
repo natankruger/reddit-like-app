@@ -4,8 +4,8 @@ export default function Post(props) {
 
   return (
     <div className={Style.Wrapper}>
-      <small>{props.userId}</small>
-      <h1>{props.title}</h1>
+      <small className={Style.SubTitle}>{props.userId}</small>
+      <h3 className={Style.Title}>{props.title}</h3>
       <p>{ props.body }</p>
     </div>
   )

@@ -3,6 +3,6 @@
     margin-bottom: 33px;
     border: solid 0px #555;
     background-color: #eed;
-    box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
-    border-radius:200px;
+    box-shadow: 8px 8px 15px 1px rgba(0, 0, 0, 0.44);
+    border-radius:4px;
 }
