@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-       testes
+       testes: {currentPost}
       </main>
 
       <footer className={styles.footer}>

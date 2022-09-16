@@ -17,7 +17,7 @@ export default function Post(props) {
   }
 
   function goToComments() {
-    router.push('/comentarios')
+    router.push({ pathname: '/comentarios', query: { currentPost: props.id }})
   }
 
   return (
