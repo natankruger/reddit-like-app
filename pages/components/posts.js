@@ -5,7 +5,7 @@ export default function Posts(props) {
   function renderList() {
 
     return props.list.map((item, key) => {
-        return <Post userId={item.userId} title={item.title} body={item.body} key={key} />
+        return <Post id={item.id} userId={item.userId} title={item.title} body={item.body} key={key} />
       })
   }
 
