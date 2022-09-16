@@ -1,4 +1,5 @@
 import Style from './style.module.css'
+import CommentBtn from '../commentBtn'
 
 export default function Post(props) {
 
@@ -6,7 +7,8 @@ export default function Post(props) {
     <div className={Style.Wrapper}>
       <small className={Style.SubTitle}>{props.userId}</small>
       <h3 className={Style.Title}>{props.title}</h3>
-      <p>{ props.body }</p>
+      <p>{props.body}</p>
+      <CommentBtn />
     </div>
   )
 }
