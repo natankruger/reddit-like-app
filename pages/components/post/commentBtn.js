@@ -1,7 +1,7 @@
 import BtnStyle from './buttonStyle.module.css'
 
-export default function Comments() {
+export default function CommentBtn() {
     return (<section>
-        <button className={BtnStyle.NeonButton}>Comentários</button>
+        <button>Comentários</button>
     </section>)
   }
