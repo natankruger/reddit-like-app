@@ -1,12 +1,39 @@
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import Feed from './components/feed'
 import styles from '../styles/Home.module.css'
+import getComments from './api/comments';
+import commentsStyle from './comentarios.module.css'
 
 
 export default function Home() {
   const router = useRouter()
   const currentPost = router.query.currentPost
+  const [comments, setComments] = useState([])
+
+  useEffect(() => {
+    if(!router.isReady) return;
+    getData()
+  }, [router.isReady])
+
+  async function getData() {
+    const res = await getComments(currentPost)
+    setComments(res)
+    console.log(res)
+  }
+
+  //fazer caixinhas pros comentarios
+  function renderComments () {
+    //fazer loops pegar dados dos comentarios
+    return comments.map ((item, key) => {
+      // <button className={BtnStyle.NeonButton}>Extras</button>
+      return <div key={key} className={commentsStyle.test}>
+        <h1>{item.name}</h1>
+        <p>{item.body}</p>
+        <small>{item.email}</small>
+      </div>
+    })
+  }
 
   return (
     <div className={styles.container}>
@@ -18,6 +45,7 @@ export default function Home() {
 
       <main className={styles.main}>
        testes: {currentPost}
+       {renderComments()}
       </main>
 
       <footer className={styles.footer}>
