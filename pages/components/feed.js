@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import HomeBtn from "./homeBtn"
 import Posts from "./posts"
 import Destaques from "./destaques"
-import getPosts from '../api/posts';
+import { getPosts } from '../api/posts';
 
 export default function Feed() {
   const [posts, setPosts] = useState([])

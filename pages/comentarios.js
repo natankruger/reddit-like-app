@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'
+import Link from 'next/link';
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import getComments from './api/comments';
+import { getPost } from './api/posts';
 import commentsStyle from './comentarios.module.css'
 
 
@@ -10,6 +12,7 @@ export default function Home() {
   const router = useRouter()
   const currentPost = router.query.currentPost
   const [comments, setComments] = useState([])
+  const [post, setPost] = useState([])
 
   useEffect(() => {
     if(!router.isReady) return;
@@ -17,9 +20,10 @@ export default function Home() {
   }, [router.isReady])
 
   async function getData() {
+    const postRes = await getPost(currentPost)
     const res = await getComments(currentPost)
     setComments(res)
-    console.log(res)
+    setPost(postRes)
   }
 
   //fazer caixinhas pros comentarios
@@ -44,7 +48,13 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-       testes: {currentPost}
+        <Link href="/">
+          <a>Voltar</a>
+        </Link>
+        <section className={commentsStyle.post}>
+          <h1>{post.title}</h1>
+          <p>{ post.body }</p>
+       </section>
        {renderComments()}
       </main>
 
