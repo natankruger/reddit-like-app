@@ -4,4 +4,8 @@ async function getPosts() {
   return await fetcher('posts')
 }
 
-export default getPosts
+async function getPost(id) {
+  return await fetcher(`posts/${id}`)
+}
+
+export { getPosts, getPost }
